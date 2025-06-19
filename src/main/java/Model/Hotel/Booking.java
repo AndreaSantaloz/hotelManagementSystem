@@ -11,17 +11,17 @@ public class Booking {
     private final Room room;
     private final Integer people;
 
-    private final String dateinicial;
-    private final String dateend;
+    private final String dateInitial;
+    private final String dateFinal;
 
-    public Booking(String id, Client client, Hotel hotel, Room room, Integer people, String dateinicial, String dateend) {
+    public Booking(String id, Client client, Hotel hotel, Room room, Integer people, String dateInitial, String dateFinal) {
         this.id = id;
         this.client = client;
         this.hotel = hotel;
         this.room = room;
         this.people = people;
-        this.dateinicial = dateinicial;
-        this.dateend = dateend;
+        this.dateInitial = dateInitial;
+        this.dateFinal = dateFinal;
     }
 
     public String getId() {
@@ -44,12 +44,12 @@ public class Booking {
         return people;
     }
 
-    public String getDateinicial() {
-        return dateinicial;
+    public String getDateInitial() {
+        return dateInitial;
     }
 
-    public String getDateend() {
-        return dateend;
+    public String getDateFinal() {
+        return dateFinal;
     }
 
     @Override
@@ -57,12 +57,12 @@ public class Booking {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Booking booking = (Booking) o;
-        return Objects.equals(id, booking.id) && Objects.equals(client, booking.client) && Objects.equals(hotel, booking.hotel) && Objects.equals(room, booking.room) && Objects.equals(people, booking.people) && Objects.equals(dateinicial, booking.dateinicial) && Objects.equals(dateend, booking.dateend);
+        return Objects.equals(id, booking.id) && Objects.equals(client, booking.client) && Objects.equals(hotel, booking.hotel) && Objects.equals(room, booking.room) && Objects.equals(people, booking.people) && Objects.equals(dateInitial, booking.dateInitial) && Objects.equals(dateFinal, booking.dateFinal);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, client, hotel, room, people, dateinicial, dateend);
+        return Objects.hash(id, client, hotel, room, people, dateInitial, dateFinal);
     }
 
     @Override
@@ -72,8 +72,8 @@ public class Booking {
                 ", hotel=" + hotel +
                 ", room=" + room +
                 ", people=" + people +
-                ", dateinicial='" + dateinicial + '\'' +
-                ", dateend='" + dateend + '\'' +
+                ", dateinicial='" + dateInitial + '\'' +
+                ", dateend='" + dateFinal + '\'' +
                 '}';
     }
 }
